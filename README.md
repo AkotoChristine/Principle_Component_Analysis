@@ -6,39 +6,28 @@ The script follows these steps:
 
 Compute Covariance Matrix: The covariance matrix is calculated to understand the relationship between different features in the dataset.
 Eigendecomposition: The script performs eigendecomposition on the covariance matrix to get the eigenvalues and eigenvectors.
+
 Sort Eigenvalues and Eigenvectors: Eigenvalues and their corresponding eigenvectors are sorted in descending order of importance.
+
 Select Principal Components: The top k principal components are selected based on the sorted eigenvalues.
+
 Project Data: The original data is projected onto the selected principal components.
-Requirements
+
+### Requirements
+
 Python 3.x
 NumPy: For numerical operations and matrix manipulation.
 You can install NumPy using pip:
 
-bash
-Copy
-Edit
 pip install numpy
 How to Run
 Clone or download the script.
 Run the script in your Python environment:
 bash
-Copy
-Edit
-python pca_example.py
-The output will display the data projected onto the top principal component.
-Code Explanation
-Data Matrix (X): The dataset consists of 4 samples and 2 features (dimensions).
-Covariance Matrix: The covariance matrix is computed using np.cov(X, rowvar=False) to find the relationships between the features.
-Eigenvalues and Eigenvectors: np.linalg.eig(cov_matrix) calculates the eigenvalues and eigenvectors of the covariance matrix.
-Sorting: The eigenvalues are sorted in descending order, and the eigenvectors are rearranged accordingly.
-Selecting Principal Components: The script selects the first k principal components (in this case, k=1).
-Data Projection: The original data X is projected onto the selected principal components using matrix multiplication (X @ principal_components).
+
 Example Output
 The output displays the transformed data in the principal component space, where each row is the original data projected onto the first principal component.
 
-lua
-Copy
-Edit
 Projected Data:
  [[ 2.12132034]
  [ 3.12132034]
